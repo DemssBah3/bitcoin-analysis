@@ -102,3 +102,13 @@ Ce projet est réalisé à des fins académiques.
 Professeur : HN Doukaga
 Dataset : Kaggle (Bitcoin Historical Data)
 UQAC - Département d'informatique et de mathématique
+
+
+### ⚠️ Important : Données non incluses
+
+Le fichier de données (365 MB) n'est pas inclus dans ce dépôt en raison des limitations de taille de GitHub.
+
+**Pour obtenir les données :**
+1. Allez sur [Kaggle - Bitcoin Historical Data](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data)
+2. Téléchargez le fichier `btcusd_1-min_data.csv`
+3. Placez-le dans le dossier `data/`
