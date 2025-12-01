@@ -1,3 +1,10 @@
+# Ouvrir le fichier
+notepad .gitignore
+
+# Données volumineuses
+data/*.csv
+data/*.zip
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
