@@ -1,114 +1,90 @@
-# Analyse Exploratoire du Bitcoin
+# Analyse exploratoire du Bitcoin
 
-## Description
+## Apercu
+- Analyse temporelle des donnees historiques du Bitcoin (OHLCV a la minute) de janvier 2012 a novembre 2025.
+- Projet realise dans le cadre du cours **8PRO408 - Outils de programmation pour la science des donnees** a l'UQAC.
 
-Analyse temporelle complète des données historiques du Bitcoin (OHLCV à la minute) de janvier 2012 à novembre 2025.
+## Structure du projet
+```
+bitcoin-analysis-main/
+|-- data/                 # Donnees brutes (CSV)
+|-- notebooks/            # Notebook Jupyter d'analyse
+|   `-- bitcoin_analysis.ipynb
+|-- app/                  # Application Streamlit
+|   `-- streamlit_app.py
+|-- reports/              # Rapport PDF et graphiques exportes
+|   |-- rapport_analyse_bitcoin.pdf
+|   |-- price_evolution.png
+|   |-- volatility_analysis.png
+|   `-- correlation_heatmap.png
+|-- requirements.txt      # Dependances Python
+`-- README.md             # Ce fichier
+```
 
-Ce projet a été réalisé dans le cadre du cours **8PRO408 - Outils de programmation pour la science des données** à l'UQAC.
-
-## 📁 Structure du projet
-
-bitcoin-analysis/ 
-├── data/ # Données brutes (CSV) 
-
-├── notebooks/ # Notebook Jupyter d'analyse 
-    │ └── bitcoin_analysis.ipynb 
-
-├── app/ # Application Streamlit 
-    │ └── streamlit_app.py 
-
-├── reports/ # Rapport PDF et graphiques 
-    │ ├── rapport_analyse_bitcoin.pdf 
-    │ ├── price_evolution.png │ ├── volatility_analysis.png 
-    │ ├── correlation_heatmap.png 
-    │ └── ... 
-├── requirements.txt # Dépendances Python 
-
-└── README.md # Ce fichier
-
-## 🚀 Installation
-
-### Prérequis
-- Python 3.13 ou supérieur
+## Prerequis
+- Python 3.13 ou superieur
 - pip
 
-### Étapes d'installation
-
-1. **Cloner le dépôt**
-
-```bash
+## Installation
+1. Cloner le depot :
+   ```bash
 git clone https://github.com/DemssBah3/bitcoin-analysis.git
 cd bitcoin-analysis
-
-2. **Installer les dépendances**
-
+   ```
+2. (Optionnel) Creer et activer un environnement virtuel :
+   ```bash
+python -m venv .venv
+# Windows
+.\.venv\Scripts\activate
+# Linux / macOS
+source .venv/bin/activate
+   ```
+3. Installer les dependances :
+   ```bash
 pip install -r requirements.txt
+   ```
 
-3. **Télécharger les données**
+## Donnees (a telecharger)
+- Le fichier `btcusd_1-min_data.csv` (~365 MB) n'est pas inclus pour des raisons de taille.
+- Source : [Kaggle - Bitcoin Historical Data](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data).
+- Apres telechargement, placez le fichier dans `data/`.
 
-Téléchargez le dataset depuis Kaggle
-Placez le fichier btcusd_1-min_data.csv dans le dossier data/
-📊 Utilisation
-Notebook Jupyter
-Pour explorer l'analyse complète :
+## Utilisation
+- Notebook Jupyter :
+  ```bash
+jupyter notebook notebooks/bitcoin_analysis.ipynb
+  ```
+- Application Streamlit :
+  ```bash
+cd app
+streamlit run streamlit_app.py
+  ```
+  L'application sera accessible sur http://localhost:8501.
 
-Copyjupyter notebook notebooks/bitcoin_analysis.ipynb
-Ou avec Python :
+## Resultats cles
+- Periode analysee : 2012-2025 (~14 ans)
+- Croissance totale : +1 973 306%
+- Prix maximum : 126 272 $
+- Volatilite moyenne (30 jours) : 3.46%
+- Meilleure annee : 2013 (+5 446%)
 
-Copypython -m notebook notebooks/bitcoin_analysis.ipynb
-Application Streamlit
-Pour lancer l'application interactive :
+## Technologies
+- Python 3.13, pandas, NumPy, Matplotlib, Seaborn, Plotly, Streamlit, Jupyter
 
-Copycd app
-python -m streamlit run streamlit_app.py
-L'application sera accessible à : http://localhost:8501
+## Livrables
+- Notebook Jupyter complet
+- Rapport PDF (2 pages)
+- Application Streamlit fonctionnelle
+- Graphiques exportes (PNG/HTML)
 
-📈 Résultats clés
-Période analysée : 2012-2025 (~14 ans)
-Croissance totale : +1 973 306%
-Prix maximum : $126,272
-Volatilité moyenne : 3.46% (30 jours)
-Meilleure année : 2013 (+5,446%)
-
-🛠️ Technologies utilisées
-Python 3.13
-pandas - Manipulation de données
-NumPy - Calculs numériques
-Matplotlib - Visualisations statiques
-Seaborn - Visualisations statistiques
-Plotly - Visualisations interactives
-Streamlit - Application web interactive
-Jupyter - Notebooks d'analyse
-
-
-📄 Livrables
-✅ Notebook Jupyter complet avec analyses
-✅ Rapport PDF (2 pages)
-✅ Application Streamlit fonctionnelle
-✅ Graphiques sauvegardés (PNG/HTML)
-✅ README documenté
-
-
-👤 Auteur
+## Auteurs
 Aboubacar Demba Bah, Mamadou Cire Bah, Lahat Fall  
-Étudiant(e) - UQAC
-Cours : 8PRO408
-Date : Décembre 2025
+Etudiant(e) - UQAC | Cours : 8PRO408 | Date : decembre 2025
 
-📝 Licence
-Ce projet est réalisé à des fins académiques.
+## Licence
+Projet realise a des fins academiques.
 
-🙏 Remerciements
-Professeur : HN Doukaga
-Dataset : Kaggle (Bitcoin Historical Data)
-UQAC - Département d'informatique et de mathématique
-
-
-### ⚠️ Important : Données non incluses
-
-Le fichier de données (365 MB) n'est pas inclus dans ce dépôt en raison des limitations de taille de GitHub.
-
-**Pour obtenir les données :**
-1. Allez sur [Kaggle - Bitcoin Historical Data](https://www.kaggle.com/datasets/mczielinski/bitcoin-historical-data)
-2. Téléchargez le fichier `btcusd_1-min_data.csv`
-3. Placez-le dans le dossier `data/`
+## Remerciements
+- Professeur : HN Doukaga
+- Dataset : Kaggle (Bitcoin Historical Data)
+- UQAC - Departement d'informatique et de mathematique
