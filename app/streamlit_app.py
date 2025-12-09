@@ -6,8 +6,20 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
+
+import gdown
+
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 DATA_FILE = DATA_DIR / "btcusd_1-min_data.csv"
+
+
+if not DATA_FILE.exists():
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+   
+    file_id = "1hQPfQHlsB5w2LF6wvX-pvymLHtPPIObC"
+    url = f"https://drive.google.com/file/d/1hQPfQHlsB5w2LF6wvX-pvymLHtPPIObC/view?usp=sharing"
+    gdown.download(url, str(DATA_FILE), quiet=False)
+
 SHORT_MA_WINDOW = 50
 LONG_MA_WINDOW = 200
 VOLATILITY_WINDOW = 30

@@ -6,3 +6,4 @@ plotly>=5.16.0
 streamlit>=1.27.0
 jupyter>=1.0.0
 notebook>=7.0.0
+gdown
