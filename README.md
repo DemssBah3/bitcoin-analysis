@@ -1,3 +1,8 @@
+
+## Lien pour le Streamlit
+
+https://bitcoin-analysi.streamlit.app/
+
 # Analyse exploratoire du Bitcoin (2012–2025)
 
 Analyse temporelle détaillée des données historiques du Bitcoin (OHLCV à la minute) de janvier 2012 à novembre 2025.
