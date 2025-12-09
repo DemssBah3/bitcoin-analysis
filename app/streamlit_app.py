@@ -8,17 +8,25 @@ import streamlit as st
 
 
 import gdown
+import os
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 DATA_FILE = DATA_DIR / "btcusd_1-min_data.csv"
 
-
+# Télécharger le fichier depuis Google Drive si nécessaire
 if not DATA_FILE.exists():
     DATA_DIR.mkdir(parents=True, exist_ok=True)
-   
     file_id = "1hQPfQHlsB5w2LF6wvX-pvymLHtPPIObC"
     url = f"https://drive.google.com/file/d/1hQPfQHlsB5w2LF6wvX-pvymLHtPPIObC/view?usp=sharing"
-    gdown.download(url, str(DATA_FILE), quiet=False)
+    gdown.download(url, str(DATA_FILE), quiet=False, fuzzy=True)
+
+# Vérifier que le fichier n'est pas une page HTML
+if DATA_FILE.exists():
+    with open(DATA_FILE, 'r') as f:
+        first_line = f.readline()
+        if '<' in first_line or 'html' in first_line.lower():
+            os.remove(DATA_FILE)
+            raise Exception("Le téléchargement a échoué. Google Drive a renvoyé une page HTML.")
 
 SHORT_MA_WINDOW = 50
 LONG_MA_WINDOW = 200
