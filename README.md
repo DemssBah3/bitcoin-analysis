@@ -15,23 +15,21 @@ Projet réalisé dans le cadre du cours **8PRO408 – Outils de programmation po
 
 ---
 
-## 📁 Structure du projet
-
 bitcoin-analysis/
-├── data/                       # Données brutes (CSV)
-│   └── btcusd_1-min_data.csv   # À télécharger (non inclus)
+├── data/                       
+│   └── btcusd_1-min_data.csv        # À télécharger (non inclus)
 │
-├── notebooks/                  # Notebook Jupyter d'analyse
-│   └── bitcoin_analysis.ipynb
+├── notebooks/                      
+│   └── bitcoin_analysis.ipynb       # Notebook Jupyter d'analyse
 │
-├── app/                        # Application Streamlit
-│   └── streamlit_app.py
+├── app/                            
+│   └── streamlit_app.py             # Application Streamlit
 │
-├── reports/                    # Rapport PDF et graphiques exportés
-│   ├── rapport_analyse_bitcoin.pdf
+├── reports/                         
+│   ├── rapport_analyse_bitcoin.pdf  # Rapport PDF
 │   ├── price_evolution.png
 │   ├── volatility_analysis.png
 │   └── correlation_heatmap.png
 │
-├── requirements.txt            # Dépendances Python
-└── README.md                   # Documentation du projet
+├── requirements.txt                 # Dépendances Python
+└── README.md                        # Documentation du projet
