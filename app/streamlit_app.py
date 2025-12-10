@@ -6,7 +6,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-DATA_DIR = Path(_file_).resolve().parents[1] / "data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 DATA_FILE = DATA_DIR / "btcusd_1-min_data.csv"
 AGGREGATION_OPTIONS = {
     "Horaire": "H",
